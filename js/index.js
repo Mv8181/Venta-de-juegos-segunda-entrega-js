@@ -1,6 +1,6 @@
 // /js/index.js
-import { CATALOGO } from "/js/data/catalogo.js";
-import { addVisto, getVistos, setVistos, getPause, setPause } from "/js/lib/vistos.js";
+import { CATALOGO } from "./data/catalogo.js";
+import { addVisto, getVistos, setVistos, getPause, setPause } from "./lib/vistos.js";
 
 /* =========================== BUSCADOR =========================== */
 (function setupSearch() {
@@ -81,7 +81,7 @@ const getHrefWithPlat = (p, plataforma) => {
   const qs = new URLSearchParams();
   qs.set("slug", p.slug);
   qs.set("plataforma", String(p.plataforma || plataforma).toLowerCase());
-  return `paginas/producto.html?${qs.toString()}`;
+  return `./paginas/producto.html?${qs.toString()}`;
 };
 
 // Nota: ponemos .ratio DENTRO del <a> para que el ::before no tape el click
